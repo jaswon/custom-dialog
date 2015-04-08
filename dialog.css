@@ -1,0 +1,136 @@
+.shadow {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.461);
+}
+
+.shield {
+    position: relative;
+    width: 200px;
+    height: 220px;
+    left:50%;
+    top:50%;
+    margin:-110px 0 0 -100px;
+    text-align: center;
+    /*background: #FF5800;*/
+    background-image: url("shield.png");
+    transition: all 1s;
+}
+
+.alert {
+    position: absolute;
+    margin: 80px 30px 0px 30px;
+}
+
+.close {
+    position: relative;
+    top: 180px;
+}
+
+.right-in {
+    position: absolute;
+    /*background: red;*/
+    background-image: url("sword-right.png");
+    width: 250px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -125px;
+    animation-name: right-in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.left-in {
+    position: absolute;
+    /*background: blue;*/
+    background-image: url("sword-left.png");
+    width: 250px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -125px;
+    animation-name: left-in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.right-out {
+    position: absolute;
+    /*background: red;*/
+    background-image: url("sword-right.png");
+    width: 250px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -125px;
+    animation-name: right-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.left-out {
+    position: absolute;
+    /*background: blue;*/
+    background-image: url("sword-left.png");
+    width: 250px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -125px;
+    animation-name: left-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes left-in {
+    from {
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+    to {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@keyframes right-in {
+    from {
+        opacity: 0;
+        top: 0;
+        left: 100%;
+    }
+    to {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@keyframes left-out {
+    from {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+    }
+    to {
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes right-out {
+    from {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+    }
+    to {
+        opacity: 0;
+        top: 0;
+        left: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" href="dialog.css">
+        <title>Custom Dialog</title>
+    </head>
+    <body>
+        <input type="text" id="dialogText" value="awesome text here">
+        <button id="custom" onclick="action()">Custom</button>
+    </body>
+    <script src="dialog.js"></script>
+    <script charset="utf-8">
+        function action() {
+            var text = document.getElementById("dialogText").value;
+            custom_alert(text);
+        }
+    </script>
+</html>
