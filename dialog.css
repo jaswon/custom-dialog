@@ -8,8 +8,8 @@
     background: rgba(0,0,0,.461);
 }
 
-.shield {
-    position: relative;
+.shield-in {
+    position: absolute;
     width: 200px;
     height: 220px;
     left:50%;
@@ -18,7 +18,24 @@
     text-align: center;
     /*background: #FF5800;*/
     background-image: url("shield.png");
-    transition: all 1s;
+    animation-name: shield-in;
+    animation-duration: 1s;
+    /*animation-delay: 1s;*/
+    /*animation-fill-mode: both;*/
+}
+
+.shield-out {
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    left:50%;
+    top:50%;
+    opacity: 0;
+    margin:-110px 0 0 -100px;
+    text-align: center;
+    background-image: url("shield.png");
+    animation-name: shield-out;
+    animation-duration: 1s;
 }
 
 .alert {
@@ -81,6 +98,26 @@
     animation-name: left-out;
     animation-duration: 1s;
     animation-fill-mode: both;
+}
+
+@keyframes shield-in {
+    from {
+        /*opacity: 0;*/
+        top:-50%;
+    }
+    to {
+        top:50%;
+        /*opacity: 1;*/
+    }
+}
+
+@keyframes shield-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes left-in {

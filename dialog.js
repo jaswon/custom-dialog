@@ -7,7 +7,7 @@ var custom_alert = function(text) {
     var rl = shadow.appendChild(d.createElement("div"));
     rl.className = "right-in";
     var shield = shadow.appendChild(d.createElement("div"));
-    shield.className = "shield";
+    shield.className = "shield-in";
     var alert = shield.appendChild(d.createElement("div"));
     alert.className = "alert";
     alert.innerHTML = text;
@@ -17,6 +17,7 @@ var custom_alert = function(text) {
     close.onclick = function() {
         lr.className = "left-out";
         rl.className = "right-out";
+        shield.className = "shield-out";
         setTimeout(function() {
             shadow.parentNode.removeChild(shadow);
         },1000);
